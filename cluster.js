@@ -15,8 +15,6 @@ if (cluster.isMaster) {
     });
 
 } else {
-    // Workers can share any TCP connection
-    // In this case it is an HTTP server
     require('./server');
 
     console.log(`Worker ${process.pid} started`);
