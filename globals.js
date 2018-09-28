@@ -4,6 +4,15 @@
 
 const fetch = require('cross-fetch');
 
+const setResponse = (res) => {
+    // Send the HTTP header 
+    // HTTP Status: 200 : OK
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    return res
+  }
+
 module.exports = {
-    fetch
+    fetch,
+    setResponse
 }
